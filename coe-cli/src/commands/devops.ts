@@ -884,24 +884,34 @@ class DevOpsCommand {
      *
      */
     async branch(args: DevOpsBranchArguments): Promise<void> {
+        this.logger?.info(util.format("Getting devops org url"))
         let devOpsOrgUrl = Environment.getDevOpsOrgUrl(args, args.settings)
+        this.logger?.info(util.format("Devops org url %s", devOpsOrgUrl))
         let authHandler = azdev.getBearerHandler(args.accessToken);
+        this.logger?.info("Retrieved bearre handler")
         let connection = this.createWebApi(devOpsOrgUrl, authHandler);
+        this.logger?.info("Created connection")
 
         let core = await connection.getCoreApi()
+        this.logger?.info(util.format("Getting project %s", args.projectName))
         let project: CoreInterfaces.TeamProject = await core.getProject(args.projectName)
+        this.logger?.info("Project retrieved")
 
         if (typeof project !== "undefined") {
             this.logger?.info(util.format("Found project %s", project.name))
 
             let gitApi = await connection.getGitApi()
 
+            this.logger?.info("Calling createBranch")
             let repo = await this.createBranch(args, project, gitApi);
+            this.logger?.info("createBranch completed")
 
             if (repo != null) {
+                this.logger?.info("Calling createBuildForBranch")
                 await this.createBuildForBranch(args, project, repo, connection);
-
+                this.logger?.info("createBuildForBranch completed")
                 await this.setBranchPolicy(args, repo, connection);
+                this.logger?.info("setBranchPolicy completed")
             }
         }
     }

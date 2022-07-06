@@ -372,9 +372,11 @@ class ALMCommand {
       branchArgs.settings = args.settings;
       branchArgs.openDefaultPages = true;
 
+      this.logger?.info("Creating devops command")
       let devopsCommand = this.createDevOpsCommand();
+      this.logger?.info("Calling branch command")
       await devopsCommand.branch(branchArgs)
-      this.logger?.info("Branch option complete")
+      this.logger?.info("Branch command complete")
     } catch (error) {
         this.logger?.error(error)
         throw error
