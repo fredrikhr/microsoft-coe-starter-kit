@@ -889,6 +889,7 @@ class DevOpsCommand {
         this.logger?.info(util.format("Devops org url %s", devOpsOrgUrl))
         let authHandler = azdev.getBearerHandler(args.accessToken);
         this.logger?.info("Retrieved bearre handler")
+        this.logger?.info(devOpsOrgUrl);
         let connection = this.createWebApi(devOpsOrgUrl, authHandler);
         this.logger?.info("Created connection")
 
