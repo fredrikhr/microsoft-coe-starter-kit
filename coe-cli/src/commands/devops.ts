@@ -886,6 +886,8 @@ class DevOpsCommand {
     async branch(args: DevOpsBranchArguments): Promise<void> {
         this.logger?.info(util.format("Getting devops org url"))
         let devOpsOrgUrl = Environment.getDevOpsOrgUrl(args, args.settings)
+        this.logger?.info("replacing old url substrings");
+        devOpsOrgUrl = devOpsOrgUrl.replace("/https://", "/").replace(".visualstudio.com/", "/");
         this.logger?.info(util.format("Devops org url %s", devOpsOrgUrl))
         let authHandler = azdev.getBearerHandler(args.accessToken);
         this.logger?.info("Retrieved bearre handler")
