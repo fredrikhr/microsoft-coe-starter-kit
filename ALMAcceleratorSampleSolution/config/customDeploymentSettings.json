@@ -1,13 +1,6 @@
 {
     "ActivateFlowConfiguration":  [
                                       {
-                                          "solutionComponentName":  "Email Quote",
-                                          "solutionComponentUniqueName":  "a4c44986-14d6-ec11-a7b5-000d3a1c0439",
-                                          "activateAsUser":  "#{activateflow.activateas.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#",
-                                          "sortOrder":  "#{activateflow.order.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#",
-                                          "activate":  "#{activateflow.activate.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#"
-                                      },
-                                      {
                                           "solutionComponentName":  "GetEnvironmentVariableValues",
                                           "solutionComponentUniqueName":  "16a25ccc-8b7f-ec11-8d21-0022482cfe1b",
                                           "activateAsUser":  "#{activateflow.activateas.GetEnvironmentVariableValues.16a25ccc-8b7f-ec11-8d21-0022482cfe1b}#",
@@ -27,6 +20,13 @@
                                           "activateAsUser":  "#{activateflow.activateas.LikeQuote.90d90640-11bc-ec11-983f-0022483403a3}#",
                                           "sortOrder":  "#{activateflow.order.LikeQuote.90d90640-11bc-ec11-983f-0022483403a3}#",
                                           "activate":  "#{activateflow.activate.LikeQuote.90d90640-11bc-ec11-983f-0022483403a3}#"
+                                      },
+                                      {
+                                          "solutionComponentName":  "Email Quote",
+                                          "solutionComponentUniqueName":  "a4c44986-14d6-ec11-a7b5-000d3a1c0439",
+                                          "activateAsUser":  "#{activateflow.activateas.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#",
+                                          "sortOrder":  "#{activateflow.order.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#",
+                                          "activate":  "#{activateflow.activate.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#"
                                       }
                                   ],
     "ConnectorShareWithGroupTeamConfiguration":  [
@@ -37,12 +37,6 @@
                                                      }
                                                  ],
     "SolutionComponentOwnershipConfiguration":  [
-                                                    {
-                                                        "solutionComponentType":  29,
-                                                        "solutionComponentName":  "Email Quote",
-                                                        "solutionComponentUniqueName":  "a4c44986-14d6-ec11-a7b5-000d3a1c0439",
-                                                        "ownerEmail":  "#{owner.ownerEmail.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#"
-                                                    },
                                                     {
                                                         "solutionComponentType":  29,
                                                         "solutionComponentName":  "GetEnvironmentVariableValues",
@@ -60,14 +54,15 @@
                                                         "solutionComponentName":  "Like Quote",
                                                         "solutionComponentUniqueName":  "90d90640-11bc-ec11-983f-0022483403a3",
                                                         "ownerEmail":  "#{owner.ownerEmail.LikeQuote.90d90640-11bc-ec11-983f-0022483403a3}#"
+                                                    },
+                                                    {
+                                                        "solutionComponentType":  29,
+                                                        "solutionComponentName":  "Email Quote",
+                                                        "solutionComponentUniqueName":  "a4c44986-14d6-ec11-a7b5-000d3a1c0439",
+                                                        "ownerEmail":  "#{owner.ownerEmail.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#"
                                                     }
                                                 ],
     "FlowShareWithGroupTeamConfiguration":  [
-                                                {
-                                                    "solutionComponentName":  "Email Quote",
-                                                    "solutionComponentUniqueName":  "a4c44986-14d6-ec11-a7b5-000d3a1c0439",
-                                                    "aadGroupTeamName":  "#{flow.sharing.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#"
-                                                },
                                                 {
                                                     "solutionComponentName":  "GetEnvironmentVariableValues",
                                                     "solutionComponentUniqueName":  "16a25ccc-8b7f-ec11-8d21-0022482cfe1b",
@@ -82,6 +77,11 @@
                                                     "solutionComponentName":  "Like Quote",
                                                     "solutionComponentUniqueName":  "90d90640-11bc-ec11-983f-0022483403a3",
                                                     "aadGroupTeamName":  "#{flow.sharing.LikeQuote.90d90640-11bc-ec11-983f-0022483403a3}#"
+                                                },
+                                                {
+                                                    "solutionComponentName":  "Email Quote",
+                                                    "solutionComponentUniqueName":  "a4c44986-14d6-ec11-a7b5-000d3a1c0439",
+                                                    "aadGroupTeamName":  "#{flow.sharing.EmailQuote.a4c44986-14d6-ec11-a7b5-000d3a1c0439}#"
                                                 }
                                             ],
     "AadGroupCanvasConfiguration":  [
